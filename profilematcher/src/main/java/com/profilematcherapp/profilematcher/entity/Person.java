@@ -1,4 +1,4 @@
-package com.profilematcherapp.profilematcher;
+package com.profilematcherapp.profilematcher.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,16 +10,17 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "students_table")
+@Table(name = "person_table")
 public class Person {
 
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    private String name;
-    private String description;
-    private String status;
+    private String age;
+    private String gender;
+    private String major;
 
-    @Column(name = "username")
-    private String username;
+    @Column(name = "name")
+    private String name;
 }
