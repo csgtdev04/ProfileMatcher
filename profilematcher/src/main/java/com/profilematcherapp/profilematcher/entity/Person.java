@@ -21,6 +21,6 @@ public class Person {
     private String gender;
     private String major;
 
-    @Column(name = "name")
+    @Column(name = "name", unique = true)
     private String name;
 }
